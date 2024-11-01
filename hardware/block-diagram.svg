@@ -1,0 +1,74 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Grid (for reference) -->
+    <defs>
+        <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#eee" stroke-width="1"/>
+        </pattern>
+        <!-- Arrow marker definition -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6"
+            orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="black"/>
+        </marker>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+    
+    <!-- DC/DC Converter -->
+    <rect x="350" y="50" width="120" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="410" y="85" text-anchor="middle" font-family="Arial">DC/DC</text>
+    <text x="410" y="100" text-anchor="middle" font-family="Arial">Converter</text>
+
+    <!-- ESP32 -->
+    <rect x="300" y="200" width="200" height="150" fill="none" stroke="black" stroke-width="3"/>
+    <text x="400" y="260" text-anchor="middle" font-family="Arial" font-size="20">ESP32</text>
+    <text x="400" y="290" text-anchor="middle" font-family="Arial" font-size="14">Central Controller</text>
+    <text x="400" y="310" text-anchor="middle" font-family="Arial" font-size="14">Main Processing Unit</text>
+
+    <!-- Ping Sensor -->
+    <rect x="100" y="245" width="100" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="150" y="280" text-anchor="middle" font-family="Arial">Ping Sensor</text>
+
+    <!-- Audio Chain -->
+    <!-- PCM5102 -->
+    <rect x="600" y="245" width="100" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="650" y="270" text-anchor="middle" font-family="Arial">PCM5102</text>
+    
+    <!-- Amplifier -->
+    <rect x="750" y="245" width="100" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="800" y="270" text-anchor="middle" font-family="Arial">AMP</text>
+    <!-- Flipped triangle -->
+    <path d="M 825 275 L 775 245 L 775 305 L 825 275" fill="none" stroke="black" stroke-width="1.5"/>
+    
+    <!-- Loudspeaker Symbol -->
+    <path d="M 900 245 L 920 245 L 940 225 L 940 325 L 920 305 L 900 305 Z" fill="none" stroke="black" stroke-width="2"/>
+    <!-- Sound waves -->
+    <path d="M 945 255 Q 955 275 945 295" fill="none" stroke="black" stroke-width="1.5"/>
+    <path d="M 950 245 Q 965 275 950 305" fill="none" stroke="black" stroke-width="1.5"/>
+    
+    <!-- Rotary Encoders -->
+    <rect x="250" y="450" width="120" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="310" y="485" text-anchor="middle" font-family="Arial">Rotary Enc 1</text>
+    
+    <rect x="430" y="450" width="120" height="60" fill="none" stroke="black" stroke-width="2"/>
+    <text x="490" y="485" text-anchor="middle" font-family="Arial">Rotary Enc 2</text>
+
+    <!-- Connections with arrows -->
+    <!-- DC/DC to ESP32 -->
+    <path d="M 410 110 L 410 200" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Ping to ESP32 -->
+    <path d="M 200 275 L 300 275" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- ESP32 to PCM -->
+    <path d="M 500 275 L 600 275" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- PCM to AMP -->
+    <path d="M 700 275 L 750 275" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- AMP to Speaker -->
+    <path d="M 850 275 L 900 275" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Rotary Encoders to ESP32 -->
+    <path d="M 310 450 L 310 350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 490 450 L 490 350" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
